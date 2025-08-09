@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Rutas Google Maps — Opciones</title>
+  <style>
+    :root{--bg:#0f1724;--card:#0b1220;--accent:#06b6d4;--muted:#94a3b8;color-scheme:dark}
+    body{font-family:Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; background:linear-gradient(180deg,#071026 0%, #07172a 100%); color:#e6eef6; margin:0; padding:32px;}
+    .container{max-width:900px;margin:0 auto}
+    header{display:flex;align-items:center;gap:16px;margin-bottom:20px}
+    h1{font-size:20px;margin:0}
+    p{margin:0;color:var(--muted)}
+    .card{background:rgba(255,255,255,0.03); padding:20px;border-radius:12px;box-shadow:0 6px 18px rgba(2,6,23,0.6)}
+    .row{display:flex;gap:12px;flex-wrap:wrap;margin-top:16px}
+    .btn{display:inline-block;padding:10px 16px;border-radius:10px;background:linear-gradient(90deg,var(--accent),#0ea5a4);color:#021027;text-decoration:none;font-weight:600}
+    .btn.secondary{background:transparent;color:var(--accent);border:1px solid rgba(255,255,255,0.06)}
+    .note{margin-top:14px;color:var(--muted);font-size:13px}
+    .col{flex:1;min-width:240px}
+    footer{margin-top:18px;color:var(--muted);font-size:13px}
+    code{background:rgba(255,255,255,0.03);padding:6px;border-radius:6px}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div>
+        <h1>Rutas (Google Maps)</h1>
+        <p>Haz click en los botones para abrir cada ruta en Google Maps (web).</p>
+      </div>
+    </header>
+
+    <div class="card">
+      <strong>Coordenadas usadas</strong>
+      <ul style="margin-top:8px;color:var(--muted);">
+        <li><code>SET – Destino</code>: 37.329665, -5.809474</li>
+        <li><code>Salida F.P.T.</code>: 37.394387, -5.968740</li>
+        <li><code>Salida Coche 1</code>: 37.400279, -5.942437</li>
+        <li><code>P.T. 1</code>: 37.399194, -5.980861</li>
+        <li><code>P.T. 2</code>: 37.343918, -5.977316</li>
+      </ul>
+
+      <div class="row" style="margin-top:18px">
+        <div class="col">
+          <strong>Opción A — 1 vehículo (todo en una ruta)</strong>
+          <p class="note">Abrirá Google Maps con origen, paradas y destino en una sola ruta.</p>
+          <div style="margin-top:10px">
+            <a class="btn" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/dir/?api=1&origin=37.394387,-5.968740&destination=37.329665,-5.809474&waypoints=37.399194,-5.980861%7C37.343918,-5.977316">Ver ruta (1 vehículo)</a>
+          </div>
+        </div>
+
+        <div class="col">
+          <strong>Opción B — 2 vehículos (coordinar)</strong>
+          <p class="note">Abre dos links: uno para el vehículo 1 y otro para el vehículo 2.</p>
+          <div style="margin-top:10px;display:flex;gap:8px;flex-wrap:wrap">
+            <a class="btn" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/dir/?api=1&origin=37.394387,-5.968740&destination=37.329665,-5.809474&waypoints=37.399194,-5.980861">Vehículo 1 (F.P.T. → P.T.1 → Destino)</a>
+            <a class="btn secondary" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/dir/?api=1&origin=37.400279,-5.942437&destination=37.329665,-5.809474&waypoints=37.343918,-5.977316">Vehículo 2 (Coche1 → P.T.2 → Destino)</a>
+          </div>
+        </div>
+      </div>
+
+      <p class="note">Si quieres, copia/pega estos enlaces en Whatsapp o envíalos al conductor. Google Maps mostrará tiempo estimado, distancia y alternativa con tráfico en vivo.</p>
+
+      <footer>
+        <div>Consejo pro: abre los enlaces desde el móvil para que el conductor pueda iniciar navegación directa con la app.</div>
+      </footer>
+    </div>
+  </div>
+</body>
+</html>
